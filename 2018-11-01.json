@@ -139,7 +139,7 @@
             "name": "SMS template",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/SMStemplates"
+              "$ref": "#/definitions/SMS template"
             }
           }
         ],
@@ -644,10 +644,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "eid": {
-                  "type": "string",
-                  "example": "A341974A-30AD-4F78-B2CF-68A9A968AF69"
-                },
                 "description": {
                   "$ref": "#/definitions/socialAuthProfileRtn"
                 },
@@ -661,19 +657,20 @@
                 }
               },
               "example": {
-                "eid": "A341974A-30AD-4F78-B2CF-68A9A968AF69",
                 "description": {
                   "channelName": "qq",
                   "channelProperties": {
-                    "id": "",
-                    "nickname": "Practicing",
-                    "gender": "男",
-                    "province": "北京",
-                    "city": "朝阳",
-                    "year": "2011",
-                    "createdTime": "2018-06-25T03:55:15.4974552Z",
-                    "modifiedTime": "2018-06-25T10:13:49.3421101Z"
-                  }
+                    "id": "4D9BDE681C3A8452FC65C4601F109706",
+                    "socialProfile": {
+                      "nickname": "Practicing",
+                      "gender": "男",
+                      "province": "北京",
+                      "city": "朝阳",
+                      "year": "2011"
+                    }
+                  },
+                  "createdTime": "2018-06-25T03:55:15.4974552Z",
+                  "modifiedTime": "2018-06-25T10:13:49.3421101Z"
                 }
               }
             }
@@ -773,10 +770,10 @@
           },
           {
             "in": "body",
-            "name": "",
+            "name": "otpstart",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/"
+              "$ref": "#/definitions/otpstart"
             }
           }
         ],
@@ -836,7 +833,7 @@
             "name": "",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/_1"
+              "$ref": "#/definitions/"
             }
           }
         ],
@@ -1089,7 +1086,7 @@
         ]
       }
     },
-    "SMStemplates": {
+    "SMS template": {
       "type": "object",
       "properties": {
         "templateName": {
@@ -1217,10 +1214,6 @@
     },
     "inline_response_201": {
       "properties": {
-        "eid": {
-          "type": "string",
-          "example": "A341974A-30AD-4F78-B2CF-68A9A968AF69"
-        },
         "description": {
           "$ref": "#/definitions/socialAuthProfileRtn"
         },
@@ -1232,9 +1225,10 @@
           "type": "string",
           "example": "2018-02-12T06:05:03.0127675Z"
         }
-      }
+      },
+      "example": "{description={channelName=qq, channelProperties={id=4D9BDE681C3A8452FC65C4601F109706, socialProfile={nickname=Practicing, gender=男, province=北京, city=朝阳, year=2011}}, createdTime=2018-06-25T03:55:15.4974552Z, modifiedTime=2018-06-25T10:13:49.3421101Z}}"
     },
-    "": {
+    "otpstart": {
       "type": "object",
       "required": [ "phoneNumber", "templateName" ],
       "properties": {
@@ -1262,13 +1256,6 @@
           "example": "sms",
           "description": "The channel (\"sms\", \"call\", \"email\") to send the code. The default is sms."
         }
-      },
-      "example": {
-        "phoneNumber": "1892291902",
-        "expireTime": 300,
-        "codeLength": 6,
-        "templateName": "OTPTemplate",
-        "channel": "sms"
       }
     },
     "inline_response_200_3": {
@@ -1282,7 +1269,7 @@
         "expireTime": 300
       }
     },
-    "_1": {
+    "": {
       "type": "object",
       "properties": {
         "phoneNumber": {
@@ -1295,12 +1282,12 @@
         },
         "code": {
           "type": "string",
-          "example": "31092874"
+          "example": "310928"
         }
       },
       "example": {
         "phoneNumber": "1892291902",
-        "code": "31092874",
+        "code": "310928",
         "channel": "sms"
       }
     },
@@ -1318,12 +1305,10 @@
     "socialAuthProfileReq_channelProperties": {
       "properties": {
         "accessToken": {
-          "type": "string",
-          "example": ""
+          "type": "string"
         },
         "id": {
-          "type": "string",
-          "example": "jdfiojdfoij32423ok=="
+          "type": "string"
         },
         "platform": {
           "type": "string",
@@ -1337,25 +1322,9 @@
           "type": "string",
           "example": ""
         },
-        "nickname": {
-          "type": "string",
-          "example": "Goodman"
-        },
-        "sex": {
-          "type": "string",
-          "example": "male"
-        },
-        "city": {
-          "type": "string",
-          "example": "Beijing"
-        },
-        "country": {
-          "type": "string",
-          "example": "China"
-        },
-        "headimgurl": {
-          "type": "string",
-          "example": "http://wx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/0"
+        "socialProfile": {
+          "type": "object",
+          "properties": {}
         }
       }
     },
