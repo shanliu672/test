@@ -8,7 +8,7 @@
       "email": "haoliuh@microsoft.com"
     }
   },
-  "host": "dev.cef.chinacloudapi.cn",
+  "host": "cef.chinacloudapi.cn",
   "tags": [
     {
       "name": "SMS",
