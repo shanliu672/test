@@ -833,7 +833,7 @@
             "name": "",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/"
+              "$ref": "#/definitions/otpcheck"
             }
           }
         ],
@@ -1269,7 +1269,7 @@
         "expireTime": 300
       }
     },
-    "": {
+    "otpcheck": {
       "type": "object",
       "properties": {
         "phoneNumber": {
