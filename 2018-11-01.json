@@ -23,6 +23,7 @@
       "description": "Operation related to social login"
     }
   ],
+  "schemes": [ "https" ],
   "paths": {
     "/services/sms/templates": {
       "get": {
