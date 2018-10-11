@@ -139,7 +139,7 @@
             "name": "SMS template",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/SMS template"
+              "$ref": "#/definitions/SMStemplates"
             }
           }
         ],
@@ -1089,7 +1089,7 @@
         ]
       }
     },
-    "SMS template": {
+    "SMStemplates": {
       "type": "object",
       "properties": {
         "templateName": {
